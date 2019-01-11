@@ -17,7 +17,7 @@
         <li>Add email to config  with $git config --global user.email 'YourEmail@you.com'</li>
         <li>Add file to staging area (index) with $git add <pre><file></pre> or all files with $git add .</li>
         <li>check staging area items and status anytime with $git status</li>
-        <li>Commit changes in staging area with $git commit (pushes to local repository)</li>
+        <li>Commit changes in staging area with <em>$git commit -m 'comment about changes'</em> (pushes to local repository)</li>
         <li>Push local repository to remote repository (github) with $git push</li>
     </ul>
     <h2>Pulling from remote repository</h2>
@@ -29,14 +29,38 @@
     <h2>Excluding files / directories</h2>
     <ul>
         <li>Create a file named .gitignore in your working directory</li>
-        <li>Add file names & / or directory names one per line ie...<br>
+        <li>Add file names & / or directory names preceded with f slash one per line ie...<br>
             <pre>  
                 filename1.js
-                dirName1
+                /dirName1
                 filename2.js
                 ...etc...
             </pre>
         </li>
     </ul>
+    <h2>Branching</h2>
+    <p>Branching enables changes without affecting master code base.  Great for adding new features / function to codebase.  Especially in team environments.</p>
+    <p>Example of Branch for login feature might go as follows: </p>
+    <ul>
+        <li>Add new branch with <em>$git branch login</em></li>
+        <li>Switch branche to login with <em>$git checkout login</em></li>
+        <li>You can see which branch you're in with <em>$git status</em></li>
+        <li>Stage & commit as usual.  Changes / additions will only affect current branch</li>
+        <li>Can switch back & forth between branches with <em>$git checkout <pre><branchName></pre></em></li>
+        <li>If changes shoud be added to master, switch back with <em>$git checkout master</em> & then merge with <em>$git merge login</em> (vim will open / ... press i, add comment, press esc, type :wq</li>
+
+    </ul>
+
+    <h2>Adding to remote repository</h2>
+    <p>Github example</p>
+    <ul>
+        <li>Login to github</li>
+        <li>create a new repository / name it anything, </li>
+        <li>Github will provide terminal command to add new repository ie $git add remote ... (run it on terminal in working directory)</li>
+        <li>run $git remote to see remote repository</li>
+        <li>Run <em>$git push -u origin master</em> (exact syntax should be displayed on github site)in terminal when in project directory & plug in email, pw</li>
+    </ul>
+
+
 </body>
 </html>
