@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>CSS Notes</h1>
+    </header>
+    <section>
+        <h2>From <em>HTML5 The Missing Manuel</em>:</h2>
+        <hr>
+        <p>Revisit chapter 7 to solidify simple mobile 1st layout</p>
+        <hr>
+        <p>A good breakpoint for media queries is 568px as this catches iphone in landscape mode.</p>
+        <p>For multiple breakpoints, you can use media queries as such:<br>
+            <code>
+                /* Normal styles here */
+
+                @media (not max-width: 600px) and max-width: 700px) {
+                    /* styles for 600 - 700 pixels wide */
+                }
+
+                @media (not max-width: 400px) and max-width: 600px) {
+                    /* styles for 600 - 700 pixels wide */
+                }
+                
+                @media (not max-width: 400px)  {
+                    /* styles for sub 400 pixels wide */
+                }
+
+            </code>
+        </p>
+        <p>Entire css files can be loaded to override styles for smaller devices.<code>
+
+            <head>
+                <link rel="stylesheet" href="standard.css">
+                <link rel="stylesheet" media="(max-width: 568px)" href="small_style.css">
+            </head>
+
+        </code></p>
+
+
+        <p>Template websites:</p>
+        <ul>
+            <li>https://html5up.net/</li>
+            <li>http://responsify.it/</li>
+        </ul>
+
+        <h3>Cool free templates downloaded to fool about with (learn from) in ../html5-templates</h3>
+
+<h2>From Mozilla:</h2>
+<hr>
+<h3>Clearing Floats:</h3>
+<hr>
+
+    <div class="note">
+        <p>From: https://developer.mozilla.org/en-US/docs/Web/CSS/clear</p>
+        <p><strong>Note:</strong> If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called <strong>clearfix</strong>, and one way to do it is <code>clear</code> a replaced <a href="/en-US/docs/Web/CSS/::after" title="In CSS, ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property."><code>::after</code></a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> on it.</p>
+        
+        <pre class="brush: css line-numbers  language-css"><code class=" language-css"><span class="token selector"><span class="token id">#container</span><span class="token pseudo-element">::after</span> </span><span class="token punctuation">{</span> 
+          <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+          <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> 
+          <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="line-numbers-rows" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        </div>
+
+
+
+    </section>
+</body>
+</html>

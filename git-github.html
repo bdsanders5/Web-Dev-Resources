@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Git & Github</title>
+</head>
+<body>
+    <h1>Using Git & Github</h1>
+    <p>Git is a version control system that allows you to capture snapshots of a project.   </p>
+    <h2>Setting up & pushing to repositories:</h2>
+    <p>Assumptions: You have git installed...  If not, <a href="https://git-scm.com/">Download & Install from git-scm</Download>/a></p>
+    <ul>
+        <li>Initialize local repository by opening terminal, cd to project directory & run <em>$git init</em></li>
+        <li>Add name to config  with $git config --global user.name 'Your Name'</li>
+        <li>Add email to config  with $git config --global user.email 'YourEmail@you.com'</li>
+        <li>Add file to staging area (index) with $git add <pre><file></pre> or all files with $git add .</li>
+        <li>check staging area items and status anytime with $git status</li>
+        <li>Commit changes in staging area with $git commit (pushes to local repository)</li>
+        <li>Push local repository to remote repository (github) with $git push</li>
+    </ul>
+    <h2>Pulling from remote repository</h2>
+    <ul>
+        <li>cd to project directory</li>
+        <li>run $git pull for existing projects latest version</li>
+        <li>for downloading new remote project into directory, run $git clone</li>
+    </ul>
+    <h2>Excluding files / directories</h2>
+    <ul>
+        <li>Create a file named .gitignore in your working directory</li>
+        <li>Add file names & / or directory names one per line ie...<br>
+            <pre>  
+                filename1.js
+                dirName1
+                filename2.js
+                ...etc...
+            </pre>
+        </li>
+    </ul>
+</body>
+</html>
