@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Resources:</h2>
+    <ul>
+        <li><a href="https://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/">Understanding callback functions & how to use 'em</a></li>
+    </ul>
+    <div id="root"></div>
+
+
+    <script>
+        function logUsers(userArr, logFunc) {
+            userArr.forEach(function(index, user) {
+                logFunc(index, user);
+            });
+        }
+        
+
+        let userArr = ['Bryan', 'Stacy', 'Gus'];
+        const logFunc = function(user, id) {
+            console.log(id + '. ' + user);
+        }
+
+        logUsers(userArr, logFunc);
+
+    </script>
+
+</body>
+</html>
